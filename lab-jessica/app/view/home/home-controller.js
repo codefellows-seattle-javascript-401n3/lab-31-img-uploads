@@ -8,7 +8,6 @@ function HomeController($log, $rootScope, galleryService) {
   $log.debug('HomeController');
 
   this.galleries = [];
-  this.hideEditForm = true;
 
   this.fetchGalleries = function() {
     galleryService.fetchGalleries()
