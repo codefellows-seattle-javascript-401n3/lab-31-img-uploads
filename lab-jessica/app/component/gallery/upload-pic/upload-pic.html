@@ -1,0 +1,34 @@
+<section class="upload-pic">
+  <form class="upload-pic-form"
+    ng-submit="uploadPicCtrl.uploadPic()"
+    novalidate="">
+    <fieldset>
+      <legend>Upload Pic</legend>
+      <input class="input-std"
+        type="text"
+        name="uploadPicName"
+        placeholder="picture name"
+        ng-model="uploadPicCtrl.pic.name">
+
+        <input class="input-std"
+          type="text"
+          name="uploadPicDesc"
+          placeholder="picture description"
+          ng-model="uploadPicCtrl.pic.desc">
+
+        <input class="input-std"
+          type="file"
+          name="uploadPicFile"
+          value="choose picture"
+          ng-model="uploadPicCtrl.pic.file">
+
+          <p class="grab-img"
+            ngf-select
+            ng-model="uploadPicCtrl.pic.file">
+            select picture
+          </p>
+          
+        <button class="btn-std" name="uploadButton">upload</button>
+    </fieldset>
+  </form>
+</section>

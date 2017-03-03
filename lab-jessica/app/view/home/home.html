@@ -1,0 +1,17 @@
+<section class="home">
+  <create-gallery></create-gallery>
+
+  <div>
+    <h2>Galleries</h2>
+    <ul>
+      <gallery-item
+        ng-repeat="item in homeCtrl.galleries"
+        gallery="item"
+        ng-click="homeCtrl.currentGallery=item">
+      </gallery-item>
+    </ul>
+  </div>
+
+  <pic-thumbnail-container ng-if="homeCtrl.currentGallery" gallery="homeCtrl.currentGallery"></pic-thumbnail-container>
+
+</section>
