@@ -7,7 +7,8 @@ module.exports = {
   controller: ['$log', 'picService', PicThumbmailController],
   controllerAs: 'picThumbnailCtrl',
   bindings: {
-    pic: '<'
+    pic: '<',
+    gallery: '<'
   }
 };
 
@@ -17,6 +18,6 @@ function PicThumbmailController($log, picService) {
   this.deletePic = function() {
     $log.debug('picThumbnailCtrl.deletePic()');
 
-    picService.deletePic();
+    picService.deletePic(this.gallery, this.pic);
   };
 }

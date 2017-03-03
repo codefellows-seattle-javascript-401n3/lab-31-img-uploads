@@ -13,6 +13,7 @@ module.exports = {
 
 function UploadPicController($log, picService) {
   $log.debug('UploadPicController');
+  $log.debug('upload controller gallery', this.gallery);
 
   this.pic = {};
 

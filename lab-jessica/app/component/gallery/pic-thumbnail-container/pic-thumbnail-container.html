@@ -2,6 +2,6 @@
   <h3>{{picThumbnailContainerCtrl.gallery.name}}</h3>
   <upload-pic gallery="picThumbnailContainerCtrl.gallery"></upload-pic>
   <div>
-    <pic-thumbnail ng-repeat="item in picThumbnailContainerCtrl.gallery.pics" pic="item"></pic-thumbnail>
+    <pic-thumbnail ng-repeat="item in picThumbnailContainerCtrl.gallery.pics" gallery="picThumbnailContainerCtrl.gallery" pic="item"></pic-thumbnail>
   </div>
 </section>
