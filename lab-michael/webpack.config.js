@@ -34,7 +34,7 @@ if (production) {
 
 module.exports = {
   entry: `${__dirname}/app/index.js`,
-  devtool: production ? false : 'eval',
+  devtool: production ? false : 'sourceMap',
   plugins,
   output: {
     path: 'build',
