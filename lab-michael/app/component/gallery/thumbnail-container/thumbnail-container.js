@@ -5,9 +5,10 @@ require('./_thumbnail-container.scss');
 module.exports = {
   template: require('./thumbnail-container.html'),
   controller: ['$log', 'picService', ThumbnailContainerController],
-  controllerAs: thumbnailContainerCtrl,
+  controllerAs: 'thumbnailContainerCtrl',
   bindings: {
     gallery: '<',
+    pic: '<'
   },
 };
 

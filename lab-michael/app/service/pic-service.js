@@ -15,7 +15,8 @@ function picService($q, $log, $http, Upload, authService) {
       let url = `${__API_URL__}/api/gallery/${galleryData._id}/pic`;
       let headers = {
         Authorization: `Bearer ${token}`,
-        Accept: 'application/json'
+        Accept: 'application/json',
+        // 'Content-Type':'application/json'
       };
       return Upload.upload({
         url,
@@ -26,7 +27,7 @@ function picService($q, $log, $http, Upload, authService) {
           desc: picData.desc,
           file: picData.file
         }
-      });
+      })
     })
     .then(res => {
       galleryData.pic.unshift(res.data);
